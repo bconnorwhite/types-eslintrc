@@ -1,0 +1,6 @@
+{
+  "extends": "@bconnorwhite/bob",
+  "include": [
+    "source"
+  ]
+}

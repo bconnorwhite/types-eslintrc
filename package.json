@@ -1,0 +1,48 @@
+{
+  "name": "types-eslintrc",
+  "version": "1.0.0",
+  "description": "Type checking for .eslintrc.json",
+  "license": "MIT",
+  "author": {
+    "name": "Connor White",
+    "email": "connor.bcw@gmail.com",
+    "url": "https://connorwhite.org"
+  },
+  "homepage": "https://connorwhite.org/github/types-eslintrc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bconnorwhite/types-eslintrc.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintrc",
+    "config",
+    "json",
+    "types",
+    "type",
+    "check",
+    "guard",
+    "guards",
+    "ts",
+    "tsc",
+    "config",
+    "typescript",
+    ".eslintrc.json",
+    "eslintrc.json"
+  ],
+  "files": [
+    "build"
+  ],
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "bob build",
+    "postversion": "git push",
+    "prepublishOnly": "yarn run build"
+  },
+  "dependencies": {
+    "types-json": "^1.2.0"
+  },
+  "devDependencies": {
+    "@bconnorwhite/bob": "^2.2.1"
+  }
+}
