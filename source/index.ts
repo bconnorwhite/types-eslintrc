@@ -194,7 +194,7 @@ export type ESLintConfig = {
   /**
    * To disable rules inside of a configuration file for a group of files, use the overrides key along with a files key.
    */
-  overrides: ESLintOverride[];
+  overrides?: ESLintOverride[];
   /**
    * @default "esprisma"
    */
