@@ -128,10 +128,10 @@ export type ESLintRules = {
   [name: string]: ESLintRule;
 };
 
-export interface ESLintOverride extends ESLintConfig {
+export type ESLintOverride = {
   excludedFiles?: string | string[];
   files: string | string[];
-}
+} & ESLintConfig;
 
 export type ESLintGlobalPermission = "readonly" | "writable" | "off" | "readable" | boolean;
 
