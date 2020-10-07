@@ -1,13 +1,16 @@
 <div align="center">
   <h1>types-eslintrc</h1>
   <a href="https://npmjs.com/package/types-eslintrc">
-    <img alt="npm" src="https://img.shields.io/npm/v/types-eslintrc.svg">
+    <img alt="NPM" src="https://img.shields.io/npm/v/types-eslintrc.svg">
   </a>
   <a href="https://github.com/bconnorwhite/types-eslintrc">
-    <img alt="typescript" src="https://img.shields.io/badge/TypeScript-%F0%9F%91%8D-blue.svg">
+    <img alt="TypeScript" src="https://img.shields.io/github/languages/top/bconnorwhite/types-eslintrc.svg">
+  </a>
+  <a href='https://coveralls.io/github/bconnorwhite/types-eslintrc?branch=master'>
+    <img alt="Coverage Status" src="https://img.shields.io/coveralls/github/bconnorwhite/types-eslintrc.svg?branch=master">
   </a>
   <a href="https://github.com/bconnorwhite/types-eslintrc">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/bconnorwhite/types-eslintrc?label=Stars%20Appreciated%21&style=social">
+    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/bconnorwhite/types-eslintrc?label=Stars%20Appreciated%21&style=social">
   </a>
   <a href="https://twitter.com/bconnorwhite">
     <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/bconnorwhite.svg?label=%40bconnorwhite&style=social">
@@ -20,11 +23,11 @@
 
 ## Installation
 
-```bash
+```sh
 yarn add types-eslintrc
 ```
 
-```bash
+```sh
 npm install types-eslintrc
 ```
 
