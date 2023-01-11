@@ -1,3 +1,7 @@
+# [2.0.0](https://github.com/bconnorwhite/types-eslintrc/compare/v1.0.3...v2.0.0) (2023-01-11)
+
+
+
 ## [1.0.3](https://github.com/bconnorwhite/types-eslintrc/compare/v1.0.2...v1.0.3) (2020-10-07)
 
 
