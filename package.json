@@ -52,7 +52,10 @@
     "lint:source": "ESLINT_USE_FLAT_CONFIG=false eslint src test --ext .ts",
     "prepack": "npm run build",
     "release": "npm publish",
-    "test": "vitest run --config ./vitest.config.mjs && bun test ./test/index.test.ts",
+    "test": "npm run test:node && npm run test:browser && npm run test:bun",
+    "test:node": "vitest run --config ./vitest.config.mjs --project node",
+    "test:browser": "vitest run --config ./vitest.config.mjs --project browser",
+    "test:bun": "bun test ./test/index.test.ts",
     "typecheck": "npm run build && tsc --project ./test/tsconfig.json"
   },
   "dependencies": {
