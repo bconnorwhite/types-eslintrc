@@ -6,7 +6,7 @@ export const fileName = ".eslintrc.json";
 
 export type { ESLintEnvironment };
 
-export type ESLintECMAVersion = 3 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021;
+export type ESLintECMAVersion = 3 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | "latest";
 
 export type ESLintSeverity = "off" | "warn" | "error" | 0 | 1 | 2;
 
@@ -23,33 +23,105 @@ export type ESLintOverride = {
 
 export type ESLintGlobalPermission = "readonly" | "writable" | "off" | "readable" | boolean;
 
+/**
+ * https://eslint.org/docs/v8.x/use/configure/language-options#specifying-parser-options
+ */
 export type ESLintParserOptions = {
+  /**
+   * Set to to 3, 5 (default), 6, 7, 8, 9, 10, 11, 12, 13, 14, or 15
+   * to specify the version of ECMAScript syntax you want to use.
+   * You can also set it to 2015 (same as 6), 2016 (same as 7), 2017 (same as 8),
+   * 2018 (same as 9), 2019 (same as 10), 2020 (same as 11), 2021 (same as 12),
+   * 2022 (same as 13), 2023 (same as 14), or 2024 (same as 15) to use the year-based naming.
+   * You can also set "latest" to use the most recently supported version.
+   */
   ecmaVersion?: ESLintECMAVersion;
+  /**
+   * Set to "script" (default) or "module" if your code is in ECMAScript modules.
+   */
   sourceType?: "script" | "module";
+  /**
+   * An object indicating which additional language features you'd like to use.
+   */
   ecmaFeatures?: {
+    /**
+     * Allow return statements in the global scope
+     */
     globalReturn?: boolean;
+    /**
+     * Enable global strict mode (if ecmaVersion is 5 or greater)
+     */
     impliedStrict?: boolean;
+    /**
+     * Enable JSX
+     */
     jsx?: boolean;
+    /**
+     * @deprecated Previously, when using the default parser it was possible to use
+     * the experimentalObjectRestSpread option to enable support for rest/spread properties.
+     */
     experimentalObjectRestSpread?: boolean;
   };
 };
 
 export type ESLintConfig = {
   $schema?: string;
+  /**
+   * An environment defines global variables that are predefined.
+   */
   env?: ESLintEnvironment;
+  /**
+   * A configuration file can extend the set of enabled rules from base configurations.
+   */
   extends?: string | string[];
+  /**
+   * The additional global variables your script accesses during execution.
+   */
   globals?: {
     [name: string]: ESLintGlobalPermission;
   };
+  /**
+   * To disable all inline config comments
+   */
   noInlineConfig?: boolean;
+  /**
+   * You can tell ESLint to ignore specific files and directories by using ignorePatterns.
+   */
   ignorePatterns?: string[];
+  /**
+   * To disable rules inside of a configuration file for a group of files, use the overrides key along with a files key.
+   */
   overrides?: ESLintOverride[];
+  /**
+   * @default "esprisma"
+   */
   parser?: "esprima" | "@babel/eslint-parser" | "@typescript-eslint/parser" | string;
+  /**
+   * The JavaScript language options you want to support.
+   */
   parserOptions?: ESLintParserOptions;
+  /**
+   * To configure plugins inside of a configuration file, use the plugins key, which contains a list of plugin names.
+   */
   plugins?: string[];
+  /**
+   * Processors can extract JavaScript code from another kind of files, then lets ESLint lint the JavaScript code.
+   * Or processors can convert JavaScript code in preprocessing for some purpose.
+   */
   processor?: string;
+  /**
+   * To report unused eslint-disable comments
+   */
   reportUnusedDisableDirectives?: boolean;
+  /**
+   * Which rules are enabled and at what error level.
+   */
   rules?: ESLintRules;
+  /**
+   * You can add settings object to ESLint configuration file and it will be supplied to every rule
+   * that will be executed. This may be useful if you are adding custom rules and want them to have
+   * access to the same information and be easily configurable.
+   */
   settings?: {
     [setting: string]: JSONValue;
   };
@@ -65,13 +137,20 @@ const esLintECMAVersionSchema = z.union([
   z.literal(10),
   z.literal(11),
   z.literal(12),
+  z.literal(13),
+  z.literal(14),
+  z.literal(15),
   z.literal(2015),
   z.literal(2016),
   z.literal(2017),
   z.literal(2018),
   z.literal(2019),
   z.literal(2020),
-  z.literal(2021)
+  z.literal(2021),
+  z.literal(2022),
+  z.literal(2023),
+  z.literal(2024),
+  z.literal("latest")
 ]);
 
 const esLintSeveritySchema = z.union([
