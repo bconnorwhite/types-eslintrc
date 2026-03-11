@@ -1,5 +1,5 @@
-import { test, expect } from "@jest/globals";
-import { fileName, parseESLintConfig, isESLintConfig } from "../source/index.js";
+import { expect, test } from "vitest";
+import { fileName, parseESLintConfig, isESLintConfig } from "../src/index.js";
 
 test("import sanity check", () => {
   expect(fileName).toBe(".eslintrc.json");

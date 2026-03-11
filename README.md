@@ -7,45 +7,68 @@
   <a href="https://github.com/bconnorwhite/types-eslintrc">
     <img alt="TypeScript" src="https://img.shields.io/github/languages/top/bconnorwhite/types-eslintrc.svg">
   </a>
-  <a href="https://coveralls.io/github/bconnorwhite/types-eslintrc?branch=master">
-    <img alt="Coverage Status" src="https://img.shields.io/coveralls/github/bconnorwhite/types-eslintrc.svg?branch=master">
-  </a>
 </div>
 
 <br />
 
-<blockquote align="center">Type checking for ESLint configs.</blockquote>
-
-<br />
-
-_If I should maintain this repo, please ⭐️_
-<a href="https://github.com/bconnorwhite/types-eslintrc">
-  <img align="right" alt="GitHub stars" src="https://img.shields.io/github/stars/bconnorwhite/types-eslintrc?label=%E2%AD%90%EF%B8%8F&style=social">
-</a>
-
-_DM me on [Twitter](https://twitter.com/bconnorwhite) if you have questions or suggestions._
-<a href="https://twitter.com/bconnorwhite">
-  <img align="right" alt="Twitter" src="https://img.shields.io/twitter/url?label=%40bconnorwhite&style=social&url=https%3A%2F%2Ftwitter.com%2Fbconnorwhite">
-</a>
+<blockquote align="center">Type checking for .eslintrc.json.</blockquote>
 
 ---
 <!--END HEADER-->
 
-This package uses [zod](https://www.npmjs.com/package/zod) to type check ESLint configs.
-
+<!-- BEGIN INSTALLATION -->
 ## Installation
 
-```sh
-yarn add types-eslintrc
-```
+<details open>
+  <summary>
+    <a href="https://www.npmjs.com/package/types-eslintrc">
+      <img src="https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=white" alt="NPM" />
+    </a>
+  </summary>
 
 ```sh
 npm install types-eslintrc
 ```
 
+</details>
+
+<details>
+  <summary>
+    <a href="https://yarnpkg.com/package/types-eslintrc">
+      <img src="https://img.shields.io/badge/yarn-2C8EBB?logo=yarn&logoColor=white" alt="Yarn" />
+    </a>
+  </summary>
+
+```sh
+yarn add types-eslintrc
+```
+
+</details>
+
+<details>
+  <summary>
+    <img src="https://img.shields.io/badge/pnpm-F69220?logo=pnpm&logoColor=white" alt="PNPM" />
+  </summary>
+
 ```sh
 pnpm add types-eslintrc
 ```
+
+</details>
+
+<details>
+  <summary>
+    <img src="https://img.shields.io/badge/bun-EE81C3?logo=bun&logoColor=white" alt="Bun" />
+  </summary>
+
+```sh
+bun add types-eslintrc
+```
+
+</details>
+<!-- END INSTALLATION -->
+
+This package uses [zod](https://www.npmjs.com/package/zod) to type check ESLint configs.
 
 ## Usage
 
@@ -70,29 +93,18 @@ const myConfig = parseESLintConfig(myConfig);
 // If myConfig is valid, it will return as ESLintConfig. Otherwise, it will return undefined.
 ```
 
-<!--BEGIN FOOTER-->
-
 <br />
 
+<!--BEGIN FOOTER-->
 <h2 id="dependencies">Dependencies<a href="https://www.npmjs.com/package/types-eslintrc?activeTab=dependencies"><img align="right" alt="dependencies" src="https://img.shields.io/librariesio/release/npm/types-eslintrc.svg"></a></h2>
 
-- [types-json](https://www.npmjs.com/package/types-json): Type checking for JSON objects
+- [types-json](https://www.npmjs.com/package/types-json): Type checking for JSON values
 - [zod](https://www.npmjs.com/package/zod): TypeScript-first schema declaration and validation library with static type inference
-
-<br />
-
-<h3>Dev Dependencies</h3>
-
-- [autorepo](https://www.npmjs.com/package/autorepo): Autorepo abstracts away your dev dependencies, providing a single command to run all of your scripts.
-
-<br />
 
 <h2 id="license">License <a href="https://opensource.org/licenses/MIT"><img align="right" alt="license" src="https://img.shields.io/npm/l/types-eslintrc.svg"></a></h2>
 
 [MIT](https://opensource.org/licenses/MIT) - _MIT License_
 <!--END FOOTER-->
-
-<br />
 
 ## Related Projects
 
