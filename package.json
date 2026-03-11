@@ -53,9 +53,9 @@
     "prepack": "npm run build",
     "release": "npm publish",
     "test": "npm run test:node && npm run test:browser && npm run test:bun",
-    "test:node": "vitest run --config ./vitest.config.mjs --project node",
     "test:browser": "vitest run --config ./vitest.config.mjs --project browser",
     "test:bun": "bun test ./test/index.test.ts",
+    "test:node": "vitest run --config ./vitest.config.mjs --project node",
     "typecheck": "npm run build && tsc --project ./test/tsconfig.json"
   },
   "dependencies": {
